@@ -10,7 +10,7 @@ class yahoo_finance extends Controller
 {
     public function index()
     {
-        $data = t_data_yahoo::with('relation_symbol')->get();
+        $data = t_data_yahoo::with('relation_symbol')->get()->sortBy('symbol')->sortBy('date');
         return view('table-datatable', compact('data'));
     }
 
@@ -24,7 +24,7 @@ class yahoo_finance extends Controller
         foreach ($request->input_name as $index => $ins){
             $data = $data->where($ins,$request->type[$index],$request->value[$index]);
         }
-        $data = $data->whereBetween('date',[$data1, $data2])->sortBy('date');
+        $data = $data->whereBetween('date',[$data1, $data2])->sortBy('symbol')->sortBy('date');
         return view('table-datatable', compact('data'));
     }
 
@@ -34,7 +34,7 @@ class yahoo_finance extends Controller
         foreach ($request->category as $index => $ins){
             $data = $data->where($ins,$request->type[$index],$request->value[$index]);
         }
-        $data = $data->sortBy('date');
+        $data = $data->sortBy('date')->sortBy('symbol')->sortBy('date');
         return response()->json(['code'=>200, 'message'=>'yahoo data finance success','data'=>$data],200);
     }
     public function APIsortwithDate(Request $request)
@@ -43,19 +43,19 @@ class yahoo_finance extends Controller
         foreach ($request->category as $index => $ins){
             $data = $data->where($ins,$request->type[$index],$request->value[$index]);
         }
-        $data = $data->whereBetween('date',[$request->date1, $request->date2])->sortBy('date');
+        $data = $data->whereBetween('date',[$request->date1, $request->date2])->sortBy('symbol')->sortBy('date');
         return response()->json(['code'=>200, 'message'=>'yahoo data finance success','data'=>$data],200);
     }
 
     public function apiStaticSort(Request $request)
     {
-        $data = t_data_yahoo::where($request->category, $request->type, $request->value)->with('relation_symbol')->get()->sortBy('date');
+        $data = t_data_yahoo::where($request->category, $request->type, $request->value)->with('relation_symbol')->get()->sortBy('symbol')->sortBy('date');
         return response()->json(['code'=>200, 'message'=>'yahoo data finance success','data'=>$data],200);
     }
 
     public function apiStaticSortwithDate(Request $request)
     {
-        $data = t_data_yahoo::where($request->category, $request->type, $request->value)->whereBetween('date',[$request->date1, $request->date2])->get()->sortBy('date');
+        $data = t_data_yahoo::where($request->category, $request->type, $request->value)->whereBetween('date',[$request->date1, $request->date2])->get()->sortBy('symbol')->sortBy('date');
         return response()->json(['code'=>200, 'message'=>'yahoo data finance success','data'=>$data],200);
     }
 }
