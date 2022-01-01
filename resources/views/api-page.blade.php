@@ -96,6 +96,65 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group">
+                            <label class="form-label" for="api-dynamic-address">API Dinamis berserta Tanggal</label>
+                            <input class="form-control" id="api-dynamic-address"
+                                   value="{{route('api-dynamic-yahoo-sort-date')}}" disabled>
+                        </div>
+                        <p>Inputan berupa Array<br> category[] yaitu PER/EPS/ROA/ROE/DER/PBV/DY<br> type[] yaitu <=, >=,
+                            == <br>dan value[] berupa angka dan variabel tanggal yaitu date1 dan date2</p>
+                        <p>Semua dikirimkan pada API address diatas dan akan diberikan data berikut, contoh : </p>
+                        <div class="row field_wrapper">
+                            <div class="col-md-10">
+                                <div class="dynamic-wrap">
+                                    <form role="form" id="dynamic-form-date" autocomplete="off">
+                                        <div class="entry input-group">
+                                            <select name="category[]" class="form-control input_name_date">
+                                                <option value="per">PER</option>
+                                                <option value="eps">EPS</option>
+                                                <option value="roa">ROA</option>
+                                                <option value="roe">ROE</option>
+                                                <option value="der">DER</option>
+                                                <option value="pbv">PBV</option>
+                                                <option value="dy">DY</option>
+                                            </select>
+                                            <select name="type[]" class="form-control type_date">
+                                                <option value="<=">Smaller Than</option>
+                                                <option value=">=">Bigger than</option>
+                                                <option value="=">Equals To</option>
+                                            </select>
+                                            <input class="form-control value_data_date" name="value[]" type="text"
+                                                   placeholder="Type something"/>
+                                            <span class="input-group-btn"><button class="btn btn-success btn-add"
+                                                                                  type="button"><span
+                                                        class="bi bi-plus-circle"></span></button></span>
+                                        </div>
+                                </div>
+                                <div class="row my-2">
+                                    <div class="form-group">
+                                        <label class="form-label" for="date1">Date 1</label>
+                                        <input type="date" name="date1" id="date1" class="form-control dynamic_date1_input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="date2">Date 2</label>
+                                        <input type="date" name="date2" id="date2" class="form-control dynamic_date2_input">
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-primary btn-submit"> Submit</button>
+                                <a href="#" type="reset" class="btn btn-secondary">Reset</a>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="hasil_dinamis" class="form-label"> Hasil</label>
+                            <textarea class="form-control" id="hasil_dinamis_date" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
                             <label class="form-label" for="api-dynamic-address">API Statis</label>
                             <input class="form-control" id="api-dynamic-address"
                                    value="{{route('api-static-yahoo-sort')}}" disabled>
@@ -138,6 +197,63 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label" for="api-dynamic-address">API Statis berserta Tanggal</label>
+                            <input class="form-control" id="api-dynamic-address"
+                                   value="{{route('api-static-yahoo-sort-date')}}" disabled>
+                        </div>
+                        <p>API Statis ini menggunakan satu inputan string category untuk melakukan sorting</p>
+                        <p>Inputan sorting berupa value <br> category yaitu PER/EPS/ROA/ROE/PBV<br> type yaitu <=, >=,
+                            == <br>dan value berupa angka dan variabel tanggal yaitu date1 dan date2</p>
+                        <p>Semua dikirimkan pada API address diatas dan akan diberikan data berikut, contoh : </p>
+                        <div class="row field_wrapper">
+                            <div class="col-md-10">
+                                <div class="dynamic-wrap">
+                                    <form role="form" id="static-form-date" autocomplete="off">
+                                        <div class="entry input-group">
+                                            <select name="category" class="form-control static_input_name_date" required>
+                                                <option value="per">PER</option>
+                                                <option value="eps">EPS</option>
+                                                <option value="roa">ROA</option>
+                                                <option value="roe">ROE</option>
+                                                <option value="der">DER</option>
+                                                <option value="pbv">PBV</option>
+                                                <option value="dy">DY</option>
+                                            </select>
+                                            <select name="type" class="form-control static_type_date" required>
+                                                <option value="<=">Smaller Than</option>
+                                                <option value=">=">Bigger than</option>
+                                                <option value="=">Equals To</option>
+                                            </select>
+                                            <input class="form-control static_value_data_date" name="value" type="number"
+                                                   placeholder="Angka" required/>
+                                        </div>
+                                </div>
+                                <div class="row my-2">
+                                    <div class="form-group">
+                                        <label class="form-label" for="date1">Date 1</label>
+                                        <input type="date" name="date1" id="date1" class="form-control static_date1_input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="date2">Date 2</label>
+                                        <input type="date" name="date2" id="date2" class="form-control static_date2_input">
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-submit"> Submit</button>
+                                <a href="#" type="reset" class="btn btn-secondary">Reset</a>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="form-group my-3">
+                            <label for="hasil_statis" class="form-label"> Hasil</label>
+                            <textarea class="form-control" id="hasil_statis_date" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         </div>
 
@@ -290,6 +406,34 @@
             }
         });
     });
+    $('#dynamic-form-date').submit(function (e) {
+        e.preventDefault();
+        var input_name = $(this).find('.input_name_date').map(function (i, el) {
+            return el.value;
+        }).get();
+        var type = $(this).find('.type_date').map(function (i, el) {
+            return el.value;
+        }).get();
+        var value = $(this).find('.value_data_date').map(function (i, el) {
+            return el.value;
+        }).get();
+        var date1 = $('.dynamic_date1_input').val();
+        var date2 = $('.dynamic_date2_input').val();
+        $.ajax({
+            type: 'POST',
+            url: '{!! route('api-dynamic-yahoo-sort-date') !!}',
+            data: {
+                'category[]': input_name,
+                'type[]': type,
+                'value[]': value,
+                'date1' : date1,
+                'date2' : date2,
+            },
+            success: function (result) {
+                $('#hasil_dinamis_date').val(JSON.stringify(result, null, 10));
+            }
+        });
+    });
 
     $('#static-form').submit(function (e) {
         e.preventDefault();
@@ -307,6 +451,31 @@
             },
             success: function (result) {
                 $('#hasil_statis').val(JSON.stringify(result, null, 10));
+            }
+        });
+    });
+
+    $('#static-form-date').submit(function (e) {
+        e.preventDefault();
+        console.log('giles');
+        var input_name = $('.static_input_name_date').val();
+        var type = $('.static_type_date').val();
+        var value = $('.static_value_data_date').val();
+        var date1 = $('.static_date1_input').val();
+        var date2 = $('.static_date2_input').val();
+
+        $.ajax({
+            type: 'POST',
+            url: '{!! route('api-static-yahoo-sort-date') !!}',
+            data: {
+                'category': input_name,
+                'type': type,
+                'value': value,
+                'date1' : date1,
+                'date2' : date2,
+            },
+            success: function (result) {
+                $('#hasil_statis_date').val(JSON.stringify(result, null, 10));
             }
         });
     });

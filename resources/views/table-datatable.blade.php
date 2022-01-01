@@ -74,6 +74,7 @@
                                                         class="bi bi-plus-circle"></span></button></span>
                                         </div>
                                     </div>
+                                    <input type="text" name="daterange" class="form-control" value="" />
                                     <button type="submit" class="btn btn-primary"> Submit</button>
                                     <a href="{{route('yahoo_index')}}" class="btn btn-secondary">Reset</a>
                                 </form>
@@ -193,6 +194,7 @@
                                 <th>DER</th>
                                 <th>PBV</th>
                                 <th>DY</th>
+                                <th>Date</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -206,6 +208,7 @@
                                     <td>{{$d->der}}</td>
                                     <td>{{$d->pbv}}</td>
                                     <td>{{$d->dy}}</td>
+                                    <td>{{$d->date}}</td>
                                 </tr>
                             @endforeach
                             </tbody>

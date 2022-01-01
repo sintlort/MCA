@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2afeb353-bfbd-4ebe-952b-69dfbcf6b170" name="Default Changelist" comment="" />
+    <list default="true" id="2afeb353-bfbd-4ebe-952b-69dfbcf6b170" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/alpha_vantage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/alpha_vantage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/yahoo_finance.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/yahoo_finance.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/api-page-alpha.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/api-page-alpha.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/api-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/api-page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/table-datatable.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/table-datatable.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/table-datatable_alpha.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/table-datatable_alpha.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +22,9 @@
     <execution>
       <executable path="composer" />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -129,6 +142,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
@@ -168,6 +182,7 @@
       <workItem from="1640968100669" duration="10631000" />
       <workItem from="1640985835901" duration="318000" />
       <workItem from="1641008328553" duration="6397000" />
+      <workItem from="1641036354887" duration="3356000" />
     </task>
     <servers />
   </component>
@@ -180,10 +195,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="658" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1641011920707">
+    <state x="658" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1641037499123">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
-    <state x="658" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1857.1080/-1920.0.1854.1080@0.0.1857.1080" timestamp="1641011920707" />
+    <state x="658" y="294" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1857.1080/-1920.0.1854.1080@0.0.1857.1080" timestamp="1641037499123" />
     <state width="1814" height="295" key="GridCell.Tab.0.bottom" timestamp="1641015643555">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
